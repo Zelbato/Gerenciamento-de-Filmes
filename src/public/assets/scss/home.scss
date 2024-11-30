@@ -1,0 +1,635 @@
+/*Estrutura do Site*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+
+    background-size: cover;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.979);
+    background-position: center;
+    color: rgb(230, 230, 230);
+    line-height: 1.5;
+}
+
+h1 a {
+    text-decoration: none;
+    color: white;
+}
+
+/*Acessibilidade*/
+
+#zoom-controls {
+    margin-top: 2px;
+}
+
+.fundo {
+
+    background-image: url(Imagens/Duna2.jpeg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100vh;
+    position: relative;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: black;
+    opacity: 0.8;
+    width: 100%;
+    height: 100%;
+}
+
+header {
+    width: 100%;
+    height: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: absolute;
+    z-index: 99;
+    box-shadow: 0 0 10px #000000c5;
+    background: rgba(0, 0, 0, 0);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.466);
+}
+
+#chk1 {
+    display: none;
+
+}
+
+i {
+    color: white;
+    cursor: pointer;
+}
+
+
+i:hover {
+    color: #eeeded;
+}
+
+header .logo {
+    flex: 1;
+    color: #fff;
+    margin-left: 50px;
+    text-transform: capitalize;
+    font-size: 15px;
+}
+
+header span {
+    font-size: 20px;
+    color: #ffbc04;
+}
+
+
+header ul {
+    flex: 2;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+header ul li {
+    list-style: none;
+}
+
+header ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: 500;
+    text-transform: capitalize;
+    padding: 5px 7px;
+    position: relative;
+}
+
+header ul li a::after{
+    content: " ";
+    width: 15%;
+    height: 2px;
+    background-color: #ffbc04;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    transition: 0.5s ease-in-out;
+}
+
+header ul li a:hover::after{
+    width: 100%;
+}
+
+header .menu-mobile {
+    font-size: 2em;
+    display: none;
+}
+
+@media(max-width:700px) {
+
+    .fundo {
+        background: url('Imagens/Duna.jpg') no-repeat center fixed;
+        position: relative;
+        background-size: cover;
+    }
+
+    header {
+        background-color: rgba(0, 0, 0, 0.767);
+        position: relative;
+    }
+
+    header ul {
+        position: absolute;/*Mudar a barra*/
+        top: 100px;
+        right: 100%;
+        background: rgba(0, 0, 0, 0.959);
+        height: calc(100vh - 100px);
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+        transition: right 0.5s linear;
+        display: flex;
+    }
+
+ 
+
+
+
+    header .menu-mobile {
+        display: block;
+        width: 25%;
+        text-align: center;
+
+    }
+
+    header .menu-mobile img{
+        width: 30px;
+        height: 30px;
+    }
+    
+
+    #chk1:checked~ul {
+        right: 0;
+    }
+}
+
+@media(max-width:600px) {
+    header .logo {
+        font-size: 20px;
+        margin-left: 8px;
+    }
+
+    header span {
+        font-size: 30px;
+    }
+
+    header ul {
+        width: 100%;
+    }
+}
+
+a {
+    color: white;
+    text-decoration: none;
+
+}
+
+
+
+/*****************FILMES***************/
+
+section {
+    padding: 0rem 0rem;
+    color: white;
+    max-height: 2000px;
+    overflow: hidden;
+    scrollbar-width: thin;
+    margin-top: 10%;
+}
+
+section .list-films {
+    list-style-type: none;
+}
+
+section button {
+    outline: none;
+    cursor: pointer;
+    transition: all ease-in-out 0.5s;
+    position: relative;
+    z-index: 1;
+    border: 1px solid rgba(255, 255, 255, 0.53);
+    padding: 15px;
+    margin-left: 2rem;
+    border-radius: 18px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    background-color: transparent;
+}
+
+section button:hover {
+    background-color: transparent;
+    border: 1px solid rgb(255, 187, 0);
+}
+
+section .list-films button li {
+    text-align: center;
+    line-height: 35px;
+    font-weight: 100;
+    font-family: Arial, Helvetica, sans-serif;
+    letter-spacing: 2px;
+}
+
+section .list-films button a {
+    text-decoration: none;
+    font-size: 20px;
+    color: #ffffffa9;
+    transition: all ease-in-out 0.3s;
+}
+
+section .list-films li a:hover {
+    color: #ffff;
+}
+
+@media only screen and (max-width: 630px) {
+    section .categoria-films {
+        margin-top: 0%;
+    }
+
+    section button {
+        position: relative;
+        margin-top: 10%;
+        margin-bottom: 10%;
+        margin-left: 15%;
+        left: -15px;
+        right: 0px;
+        align-items: center;
+        display: block;
+        
+
+
+        width: 120px;
+        height: 55px;
+        border: 1px solid rgba(255, 255, 255, 0.53);
+    }
+
+
+    section button:hover {
+        background-color: transparent;
+        border: 1px solid rgb(255, 187, 0);
+
+    }
+
+    section .list-films button {
+        font-weight: 600;
+        font-family: Arial, Helvetica, sans-serif;
+        letter-spacing: 0;
+    }
+
+    section .list-films button a {
+        font-size: 15px;
+    }
+
+    section .list-films button a:hover {
+        font-size: 16px;
+        color: #f5f5f5;
+    }
+}
+
+
+
+/*Slide de Filems*/
+
+.container {
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+    margin-top: 10%;
+}
+
+.slider-wrapper {
+    position: relative;
+}
+
+/*Botão LEFT e RIGHT*/
+.slider-wrapper .slide-button {
+    position: absolute;
+    top: 50%;
+    outline: none;
+    border: none;
+    height: 200px;
+    margin-right: 32px;
+    width: 50px;
+    z-index: 1;
+    color: #000000;
+    display: flex;
+    cursor: pointer;
+    font-size: 2.2rem;
+    background: #ffffff;
+    align-items: center;
+    justify-content: center;
+    border-radius: 0%;
+    transform: translateY(-50%);
+}
+
+.slider-wrapper .slide-button#prev-slide {
+    left: -25px;
+    display: none;
+}
+
+.slider-wrapper .slide-button#next-slide {
+    right: -25px;
+}
+
+.slider-wrapper .image-list {
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    gap: 20px;
+    font-size: 0;
+    list-style: none;
+    margin-bottom: 30px;
+    overflow-x: auto;
+    scrollbar-width: none;
+}
+
+.slider-wrapper .image-list::-webkit-scrollbar {
+    display: none;
+}
+
+.slider-wrapper .image-list .image-item {
+    width: 255px;
+    height: 400px;
+    object-fit: contain;
+}
+
+.container .slider-scrollbar {
+    height: 24px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+/*Parte branca do botao*/
+.slider-scrollbar .scrollbar-track {
+    background: #ffffff;
+    width: 100%;
+    height: 2px;
+    display: flex;
+    align-items: center;
+    border-radius: 4px;
+    position: relative;
+}
+
+.slider-scrollbar:hover .scrollbar-track {
+    height: 4px;
+}
+
+/*Botão rasteira amarelo*/
+.slider-scrollbar .scrollbar-thumb {
+    position: absolute;
+    background: #ffbc04;
+    top: 0;
+    bottom: 0;
+    width: 25%;
+    height: 100%;
+    cursor: grab;
+    border-radius: inherit;
+}
+
+.slider-scrollbar .scrollbar-thumb:active {
+    cursor: grabbing;
+    height: 8px;
+    top: -2px;
+}
+
+.slider-scrollbar .scrollbar-thumb::after {
+    content: "";
+    position: relative;
+    left: 0;
+    right: 0;
+    top: -10px;
+    bottom: -10px;
+}
+
+/* Styles for mobile and tablets */
+@media only screen and (max-width: 800px) {
+    .container {
+        width: 100%;
+        margin-top: 0%;
+        margin-bottom: 5%;
+    }
+
+    .slider-wrapper .slide-button {
+        display: none !important;
+    }
+
+    .slider-wrapper .image-list {
+        gap: 25px;
+        margin-bottom: 5px;
+        scroll-snap-type: x mandatory;
+    }
+
+    .slider-wrapper .image-list .image-item {
+        flex: 0 0 auto;
+        margin-left: 10%;
+        width: 230px;
+        height: 300px;
+    }
+
+    .slider-scrollbar .scrollbar-thumb {
+        width: 25%;
+
+    }
+}
+
+
+/*Começo do rodapé*/
+footer {
+    position: relative;
+    bottom: 0px;
+    width: 100%;
+    background: #111;
+}
+
+.main-content {
+    display: flex;
+}
+
+.main-content .box {
+    flex-basis: 50%;
+    padding: 40px 20px;
+
+}
+
+.box h2 {
+    font-size: 18px;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.box .content {
+    margin: 20px 0 0 0;
+    position: relative;
+}
+
+.box .content::after {
+    position: absolute;
+    content: '';
+    width: 15%;
+    height: 2px;
+    background: #ffbc04;
+    top: -10px;
+}
+
+.box .content:before {
+    position: absolute;
+    content: '';
+    height: 2px;
+    width: 100%;
+    background: #1a1a1a;
+    top: -10px;
+}
+
+.left .content .social {
+    margin: 20px 0 0 0;
+}
+
+.left .content .social a {
+    padding: 0 2px;
+
+    color: white;
+    text-decoration: none;
+}
+
+.left .content .social a span {
+    width: 40px;
+    height: 40px;
+    background: #1a1a1a;
+    text-align: center;
+    line-height: 40px;
+    border-radius: 5px;
+    font-size: 18px;
+    transition: 0.3s;
+}
+
+.left .content .social a span:hover {
+    background: #ffbc04;
+}
+
+.left .content p {
+    text-align: justify;
+}
+
+.center .content .fas {
+    font-size: 23px;
+    background: #1a1a1a;
+    width: 45px;
+    height: 45px;
+    line-height: 45px;
+    text-align: center;
+    border-radius: 50%;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.center .content .fas:hover {
+    background: #ffbc04;
+}
+
+.center .content .text {
+    font-size: 17px;
+    font-weight: 500;
+    padding-left: 10px;
+}
+
+.center .content .phone {
+    margin-top: 10px 0;
+}
+
+.center .content .msg {
+    margin-top: 10px;
+}
+
+.right form input,
+.right form textarea {
+    width: 100%;
+    font-size: 17px;
+    background: #151515;
+    padding-left: 10px;
+    border: 1px solid #222222;
+
+}
+
+.right form input {
+    height: 35px;
+}
+
+.right form input:focus,
+.right form textarea:focus {
+    outline-color: #fffb04;
+    color: rgb(230, 230, 230);
+}
+
+.right form .text {
+    font-size: 17px;
+    margin-bottom: 2px;
+}
+
+.right form .btn {
+    margin-top: 10px;
+}
+
+.right form .btn button {
+    width: 100%;
+    height: 40px;
+    background: #ffc62b;
+    font-size: 17px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.right form .btm button:hover {
+    background: #000;
+}
+
+
+.bottom .center {
+    padding: 5px;
+    font-size: 15px;
+    background: #151515;
+    text-align: center;
+}
+
+.bottom .center span {
+    color: #656565;
+}
+
+.bottom .center a {
+    color: #ffbc04;
+    text-decoration: none;
+
+}
+
+.bottom .center a:hover {
+    text-decoration: underline;
+}
+
+@media screen and (max-width:900px) {
+    footer {
+
+        position: relative;
+        bottom: 0px;
+    }
+
+    .main-content {
+        flex-wrap: wrap;
+        flex-direction: column;
+    }
+
+    .main-content .box {
+        margin: 5px 0;
+    }
+}
