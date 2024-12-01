@@ -4,7 +4,7 @@ const cleanCSS = require('gulp-clean-css');
 
 // Caminho dos arquivos Sass
 const paths = {
-    scss: './public/assets/scss/**/*.scss', // Todos os arquivos .scss dentro da pasta e subpastas
+    scss: 'public/assets/scss/*.scss', // Todos os arquivos .scss dentro da pasta e subpastas
     cssDest: './public/assets/css',        // Destino para os arquivos CSS gerados
 };
 

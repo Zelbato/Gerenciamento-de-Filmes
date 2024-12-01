@@ -1,0 +1,26 @@
+
+@import '../variables/variables.scss';
+
+/*Estrutura do Site*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    height: auto;
+    width: 100%;
+    font-family: $text-font;
+    background: $fundo-black;
+}
+
+h1 {
+    font-size: 40px;
+    font-weight: 100;
+    color: $text-blue !important;
+    text-align: center;
+    padding: 40px 0;
+}
+
