@@ -1,0 +1,26 @@
+{
+  "name": "gerenciamento-de-filmes",
+  "version": "1.0.0",
+  "description": "Gerenciamento de Filmes",
+  "main": "index.php",
+  "scripts": {
+    "test": "node index.php"
+  },
+  "repository": {
+    "type": "git",
+    "url": "Zelbato"
+  },
+  "keywords": [
+    "html",
+    "scss",
+    "js",
+    "php",
+    "mysql",
+    "backend"
+  ],
+  "author": "Zelbato",
+  "license": "MIT",
+  "devDependencies": {
+    "gulp": "^5.0.0"
+  }
+}

@@ -1,0 +1,17 @@
+{
+    "name": "heito/gerenciamento-de-filmes",
+    "description": "Sistema que gerencia filmes em lançamento",
+    "autoload": {
+        "psr-4": {
+            "app\\": "app/",
+            "core\\": "core/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Heitor Zelbato",
+            "email": "heitorzelbato@gmail.com"
+        }
+    ],
+    "require": {}
+}
