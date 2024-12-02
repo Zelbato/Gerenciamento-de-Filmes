@@ -5,7 +5,7 @@ require "../bootstrap.php"; // Certifique-se de que este arquivo é necessário 
 
 
 
-require_once __DIR__ . '/vendor/autoload.php';
+require_once __DIR__ . '../../vendor/autoload.php';
 
 // print_r(get_declared_classes());
 
@@ -37,24 +37,24 @@ use core\Controller;
 // }
 
 
-$config = require __DIR__ . '../../config.php';
+// $config = require __DIR__ . '../../config.php';
 
-// Acessando uma configuração
-// echo "Ambiente: " . $config['environment'] . "<br>";
-// echo "Nome da aplicação: " . $config['app']['name'] . "<br>";
+// // Acessando uma configuração
+// // echo "Ambiente: " . $config['environment'] . "<br>";
+// // echo "Nome da aplicação: " . $config['app']['name'] . "<br>";
 
-// Conexão com banco de dados (exemplo)
-$dbConfig = $config['database'];
-$dsn = "{$dbConfig['driver']}:host={$dbConfig['host']};dbname={$dbConfig['database']};charset={$dbConfig['charset']}";
-try {
-    $pdo = new PDO($dsn, $dbConfig['username'], $dbConfig['password']);
-    $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-    echo "Conexão com banco de dados bem-sucedida!";
-} catch (PDOException $e) {
-    die("Erro ao conectar ao banco de dados: " . $e->getMessage());
-}
+// // Conexão com banco de dados (exemplo)
+// $dbConfig = $config['database'];
+// $dsn = "{$dbConfig['driver']}:host={$dbConfig['host']};dbname={$dbConfig['database']};charset={$dbConfig['charset']}";
+// try {
+//     $pdo = new PDO($dsn, $dbConfig['username'], $dbConfig['password']);
+//     $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+//     echo "Conexão com banco de dados bem-sucedida!";
+// } catch (PDOException $e) {
+//     die("Erro ao conectar ao banco de dados: " . $e->getMessage());
+// }
 
 
-$views = require '../app/views/home/index.php';
+$views = require '../app/views/home/home.php';
 
 ?>

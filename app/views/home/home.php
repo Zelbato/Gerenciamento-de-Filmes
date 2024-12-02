@@ -9,7 +9,7 @@
     <title>Cine Teste - Fã de Filmes </title>
 
     <link rel="stylesheet" href="../../../public/assets/scss/home/home.scss?v=1.0">
-    
+
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="icon" type="image/jpg" sizes="32x32" href="Imagens/cineS.jpeg">
@@ -24,8 +24,7 @@
 
 <body>
 
-<h1>Gerencionamento de Filmes </h1>
-
+    <h1>Gerencionamento de Filmes </h1>
 
 </body>
 

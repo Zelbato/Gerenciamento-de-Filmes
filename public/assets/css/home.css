@@ -3,7 +3,6 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: Arial, Helvetica, sans-serif;
 }
 
 body {
@@ -19,4 +18,5 @@ h1 {
   color: rgb(61, 117, 214) !important;
   text-align: center;
   padding: 40px 0;
+  margin: auto;
 }/*# sourceMappingURL=home.css.map */
